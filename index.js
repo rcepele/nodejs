@@ -1,9 +1,11 @@
 import {concatArrays} from "./concat.js"
+import {summ} from "./sum.js"
 import * as fs from "fs"
 
 
 let val;
 let array3;
+let sum=0 ;
 
 //read users.json file
 fs.readFile("numbers.json", function(err,data) {
@@ -14,12 +16,7 @@ fs.readFile("numbers.json", function(err,data) {
     const numbers = JSON.parse(data);
 
     array3 = concatArrays(numbers);
-
-    
-    let sum = 0;
-    for (let i = 0 ; i<array3.length ; i++){
-        sum = sum + array3[i];
-    }
+    sum= summ(array3);
 
     console.log(numbers);
     console.log(array3);
