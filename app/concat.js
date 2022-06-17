@@ -1,9 +1,10 @@
 const _ = require('lodash')
 
+const array1 = [5,6,7];
+const concat = (arr) => {
+     return _.concat(arr,array1);
+} 
 
-function concat(numbers) {
-    let arr2 = [5,6,7];
+  
 
-   return numbers.concat(arr2);
-}
 module.exports.concat = concat;
